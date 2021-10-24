@@ -91,6 +91,7 @@ async function quickSort(left, right) {
 
 document.getElementById("start").addEventListener("click", async (e) => {
   e.target.setAttribute("disabled", "");
+  qty_input.setAttribute("disabled", "");
   process = true;
   await quickSort(
     0,
@@ -98,6 +99,7 @@ document.getElementById("start").addEventListener("click", async (e) => {
   );
   process = false;
   e.target.removeAttribute("disabled");
+  qty_input.removeAttribute("disabled")
 });
 
 document.getElementById("stop").addEventListener("click", () => {
