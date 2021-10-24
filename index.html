@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Sort</title>
+    <style>
+        body {
+            background-color: teal;
+            height: 80vh;
+        }
+
+        .navbar {
+            width: 90%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 10px auto;
+            gap: 5px;
+            align-content: center;
+        }
+
+        #container {
+            display: flex;
+            align-items: flex-end;
+            height: 100%;
+            background-color: black;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .point {
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        .dot {
+            position: absolute;
+            transform-origin: top;
+            transform: translateY(-100%);
+            width: 100%;
+            aspect-ratio: 1;
+            border: none;
+            border-radius: 100%;
+        }
+
+        .manage {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+            padding: 10px;
+        }
+
+        .function {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 10px;
+        }
+
+        button {
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 20px;
+            padding: 15px;
+            cursor: pointer;
+            background-color: #337a3c;
+            color: white;
+        }
+
+        button:disabled {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="control">
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
+        </div>
+        <div class="manage">
+            <div class="function">
+                <label for="qty">Array Size</label>
+                <input type="range" name="qty" id="qty" min="100" max="800" value="300">
+            </div>
+            <div class="function">
+                <label for="delay">Speed</label>
+                <input type="range" name="delay" id="delay" min="1" max="2500" value="1500">
+            </div>
+        </div>
+    </div>
+    <div id="container">
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
